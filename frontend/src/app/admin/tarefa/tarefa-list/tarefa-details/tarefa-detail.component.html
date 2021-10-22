@@ -1,0 +1,62 @@
+<div class="content-section implementation">
+    <p-card header="{{tarefaDetalhes.nome}} - {{tarefaDetalhes.id}}" subheader="{{tarefaDetalhes.descricao}}"
+        [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png">
+        </ng-template>
+        <p>
+            {{ tarefaDetalhes.descricao }}
+        </p>
+  
+        <ng-template pTemplate="footer">
+        </ng-template>
+
+    </p-card>
+</div>
+
+
+<div class="content-section documentation">
+    <p-tabView>
+        <p-tabPanel header="Descrição:">
+            <h5>
+            {{ tarefaDetalhes.descricao }}
+            </h5>
+            <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
+            {{ tarefaDetalhes.descricao }}
+            </app-code>
+        </p-tabPanel>
+    </p-tabView>
+</div>
+
+<div class="ui-g ui-g-12 flex-between" genericFormFooterButtons>
+    <button
+      pButton
+      type="submit"
+      label="save"
+      icon="ui-icon-save"></button>
+    <button
+      class="ui-button-secondary"
+      pButton type="button"
+      label="Limpar Formulario"
+      (click)="clearForm()"
+      icon="ui-icon-cancel"
+    ></button>
+    <button
+      class="ui-button-secondary"
+      pButton type="button"
+      label="Ver comentarios"
+      (click)="clearForm()"
+      icon="ui-icon-cancel"
+    ></button>
+</div>
+<p-tabView>
+    <p-tabPanel header="Header 1">
+       Content 1
+    </p-tabPanel>
+    <p-tabPanel header="Header 2">
+        Content 2
+    </p-tabPanel>
+    <p-tabPanel header="Header 3">
+        Content 3
+    </p-tabPanel>
+</p-tabView>
